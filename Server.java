@@ -26,11 +26,6 @@ import java.util.ArrayList;
 import java.util.ListIterator;
 import java.util.Set;
 
-/**
- * @author Md Arshad
- *
- */
-
 /*
  * This is the server of the application. This class needs to be
  *  executed before any client can make a connection request
@@ -79,20 +74,6 @@ public class Server extends Thread{
 					   }
 				command_Handler(local_socket,CT_AL,dis,dos,isr,os);
 				
-				///////////////////////////////////////////////////////////////////////////////////////
-				//login_username="pramod";
-				//File file = new File(path+"pramod");
-				//boolean success = file.mkdir();
-				//if(success)
-				//	System.out.println("Created directory");
-				//FileWriter writer = new FileWriter(file);
-				/*Path f = Paths.get(path+login_username+"\\\\");
-				Set<PosixFilePermission> perms =
-					    PosixFilePermissions.fromString("rwxrwxrwx");
-					FileAttribute<Set<PosixFilePermission>> attr =
-					    PosixFilePermissions.asFileAttribute(perms);
-					Files.createDirectories(f, attr);
-				ct.path=path+login_username+"\\\\";*/
 			}
 		} catch (IOException e) {
 			// TODO Auto-generated catch block
@@ -301,7 +282,7 @@ public class Server extends Thread{
 			}
 			catch (IOException e) {
 				// TODO Auto-generated catch block
-				System.err.print("IOException");
+				//System.err.print("IOException");
 				System.out.println("User Disconnectd. Aborting.");
 				break;
 			}
@@ -430,26 +411,7 @@ public class Server extends Thread{
 					}
 				}
 				
-				
-				
-			 
-			 /*String user [] = {"arshad","pramod","mohan"};
-			 for(int i=0;i<user.length;i++){
-				 File f = new File("C:\\FTP_Application\\"+user[i]);
-				 if (!(f.exists() && f.isDirectory())) {
-					   boolean success=f.mkdir();
-					   if(success){
-						   System.out.println("Created directory for user:"+user[i]);
-					   }
-					 }
-			 }*/
-			/* File f1 = new File("C:\\FTP_Application\\pramod");
-			 if (!(f1.exists() && f1.isDirectory())) {
-			   boolean success1=f1.mkdir();
-			   if(success1){
-				   System.out.println("yes pramod");
-			   }
-			 }*/
+			
 			ServerSocket ss = new ServerSocket(port);//Server Socket is started
 		    System.out.println("Server Started....");
 		    InetAddress ip;
@@ -471,17 +433,7 @@ public class Server extends Thread{
 		    s.start();//As soon as the request is received a new Server thread is started and local_socket
 		    //objectcapture the global socket object and main thread is ready to listen to a new
 		    //connection request
-		    
-		    
-		    
-		    /*InputStream isr = client.getInputStream();
-		    
-		    DataInputStream dis = new DataInputStream(isr);
-		    System.out.println(dis.readUTF());
-		    OutputStream os = client.getOutputStream();
-		    DataOutputStream dos = new DataOutputStream(os);
-		    dos.writeUTF("Received");*/
-			}
+		    }
 		} catch (IOException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
