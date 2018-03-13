@@ -16,10 +16,6 @@ import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.util.ListIterator;
 
-/**
- * @author Md Arshad
- *
- */
 /*
  * This class is used for supporting separate data connection for each transfer (STOR/RETR)
  * Each STOR or RETR opertaion starts a new thread of this class denoted by "cmd" property of the object
@@ -89,25 +85,6 @@ public class ServerSupport extends Thread{
 	    	
 	    	System.out.println("Sending Client:"+sending_client);
 	        
-
-	        // receive file
-	       /* byte [] mybytearray  = new byte [(int) filesize+10];
-	        InputStream is = sending_client.getInputStream();
-	        fos = new FileOutputStream(ct.path+filename);
-	        bos = new BufferedOutputStream(fos);
-	        bytesRead = is.read(mybytearray,0,mybytearray.length);
-	        current = bytesRead;
-
-	        do {
-	           bytesRead =
-	              is.read(mybytearray, current, (mybytearray.length-current));
-	           if(bytesRead >= 0) current += bytesRead;
-	        } while(bytesRead > -1);
-
-	    	
-	        bos.write(mybytearray, 0 , current);
-	        bos.flush();
-	        */
 	    	
 	    	fos = new FileOutputStream(ct.path+"\\\\"+filename);//create a file or overwrite existing file
 	        bos = new BufferedOutputStream(fos);
