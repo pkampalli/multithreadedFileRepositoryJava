@@ -2,10 +2,6 @@ package com.java.test;
 
 import java.net.Socket;
 
-/**
- * @author Md Arshad
- *
- */
 /*
  * The Objects of this class are created for every user that logs into the system
  * These objects are then inserted into the ArrayList<ClientTrackers> data type 
